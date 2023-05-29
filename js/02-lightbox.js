@@ -24,12 +24,16 @@ function onClickGallery(evt) {
         return;
     }
 
-    //const lightbox = basicLightbox.create(
-    //    `<img width="1400" height="900" src=${evt.target.dataset.source}>`
-    //);
-
-    var lightbox = new SimpleLightbox(".gallery", {
+    var lightbox = new SimpleLightbox(".gallery a", {
+        //captionType: "text",
+        captionsData: "alt",
+        captionDelay: 250,
         /* options */
+    });
+
+    lightbox.on("show.simplelightbox", function () {
+        // Do something…
+        //console.log("showing...");
     });
 
     return false;
