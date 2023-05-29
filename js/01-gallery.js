@@ -7,7 +7,6 @@ gallery.addEventListener("click", onClickGallery);
 
 galleryItems.forEach((element) => {
     const li = document.createElement("li");
-    // href="${element.original}"
     li.innerHTML = `<a class="gallery__link">
                         <img
                             class="gallery__image"
