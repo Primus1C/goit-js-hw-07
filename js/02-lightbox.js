@@ -1,7 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-//const currentLightbox = [0];
 const gallery = document.querySelector(".gallery");
 gallery.addEventListener("click", onClickGallery);
 
@@ -27,15 +26,12 @@ function onClickGallery(evt) {
     }
 
     const lightbox = new SimpleLightbox(".gallery a", {
-        //captionType: "text",
         captionsData: "alt",
         captionDelay: 250,
-        /* options */
     });
 
     lightbox.on("show.simplelightbox", function () {
-        // Do something…
-        //console.log("showing...");
+
     });
 
     return false;
