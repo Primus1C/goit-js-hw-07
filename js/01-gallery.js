@@ -6,7 +6,7 @@ gallery.addEventListener("click", onClickGallery);
 
 galleryItems.forEach((element) => {
     const li = document.createElement("li");
-    li.innerHTML = `<li class="gallery__item">
+    li.innerHTML = `
                         <a class="gallery__link" href="${element.original}">
                             <img
                             class="gallery__image"
@@ -14,13 +14,15 @@ galleryItems.forEach((element) => {
                             data-source="${element.original}"
                             alt="${element.description}"
                             />
-                        </a>
-                    </li>`;
-    gallery.appendChild(li);
+                        </a>`;
+    li.className = "gallery__item";
+    gallery.append(li);
 });
 
 function onClickGallery(evt) {
-    console.log(evt.target.nodeName);
+   // console.log(evt.target.nodeName);
+    console.log(evt.target);
+
 }
 
-console.log(galleryItems);
+//console.log(galleryItems);
