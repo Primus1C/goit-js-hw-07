@@ -20,11 +20,13 @@ galleryItems.forEach((element) => {
 });
 
 function onClickGallery(evt) {
+    evt.preventDefault();
+
     if (evt.target.nodeName != "IMG") {
         return;
     }
 
-    var lightbox = new SimpleLightbox(".gallery a", {
+    const lightbox = new SimpleLightbox(".gallery a", {
         //captionType: "text",
         captionsData: "alt",
         captionDelay: 250,
