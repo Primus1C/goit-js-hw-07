@@ -27,7 +27,7 @@ function onClickGallery(evt) {
     const lightbox = basicLightbox.create(
         `<img width="1400" height="900" src=${evt.target.dataset.source}>`
     );
-    currentLightbox.splice(0, 1, lightbox);
+    //currentLightbox.splice(0, 1, lightbox);
     lightbox.show();
 
     addListenerEsc();

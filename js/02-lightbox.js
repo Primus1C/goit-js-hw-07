@@ -24,15 +24,9 @@ function onClickGallery(evt) {
     if (evt.target.nodeName != "IMG") {
         return;
     }
-
-    const lightbox = new SimpleLightbox(".gallery a", {
-        captionsData: "alt",
-        captionDelay: 250,
-    });
-
-    lightbox.on("show.simplelightbox", function () {
-
-    });
-
-    return false;
 }
+
+const lightbox = new SimpleLightbox(".gallery a", {
+    captionsData: "alt",
+    captionDelay: 250,
+});
