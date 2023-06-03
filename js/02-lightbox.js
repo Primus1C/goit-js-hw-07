@@ -2,7 +2,6 @@ import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 const gallery = document.querySelector(".gallery");
-gallery.addEventListener("click", onClickGallery);
 
 galleryItems.forEach((element) => {
     const li = document.createElement("li");
@@ -17,14 +16,6 @@ galleryItems.forEach((element) => {
     li.className = "gallery__item";
     gallery.append(li);
 });
-
-function onClickGallery(evt) {
-    evt.preventDefault();
-
-    if (evt.target.nodeName != "IMG") {
-        return;
-    }
-}
 
 const lightbox = new SimpleLightbox(".gallery a", {
     captionsData: "alt",
